@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-v#+2e^_h-rgd_264w0-cjw=2x#%xuemh3y#@)m2t7(b)4b-r4c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['scienciumauth.pythonanywhere.com', 'localhost:8000']
 
 
 # Application definition
