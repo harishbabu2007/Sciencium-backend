@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-v#+2e^_h-rgd_264w0-cjw=2x#%xuemh3y#@)m2t7(b)4b-r4c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['scienciumauth.pythonanywhere.com', 'localhost:8000']
+ALLOWED_HOSTS = ['scienciumauth.pythonanywhere.com', 'localhost']
 
 
 # Application definition
@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'crispy_forms',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
@@ -85,18 +88,18 @@ DATABASES = {
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    # },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
 ]
 
 
@@ -121,5 +124,11 @@ STATIC_URL = '/static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
+# http://scienciumauth.pythonanywhere.com/
+# https://sciencium-dev.web.app/
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+STATIC_URL = '/static/'
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+LOGIN_REDIRECT_URL = "https://sciencium-dev.web.app/"
+LOGOUT_REDIRECT_URL = "https://sciencium-dev.web.app/"
